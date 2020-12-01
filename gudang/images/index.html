@@ -1,0 +1,167 @@
+<?php session_start(); ?>
+<?php include('koneksi.php'); ?>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>e-Kasir Login</title>
+ <!-- Meta-Tags -->
+ 
+ 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   
+   
+   
+   
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Business Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+	
+	<!-- css files -->
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	
+	 
+	<!-- //css files -->
+	
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- //google fonts -->
+	
+</head>
+<body>
+<div class="signupform">
+	<div class="container">
+		<!-- main content -->
+		<div class="agile_info">
+			<div class="w3l_form">
+				<div class="left_grid_info">
+					<h1>Manage Your Business</h1>
+					<p>Fasilitas kasir online untuk toko anda dan mempermudahkan dalam transaksi toko anda.</p>
+					<img src="images/image.jpg" alt="" />
+				</div>
+			</div>
+			<div class="w3_info">
+				<h2>Login</h2>
+				<p>Masukkan Username & Password.</p>
+				<form action="cek_login.php" enctype="multipart/form-data" method="post">
+					<label>Username</label>
+					<div class="input-group">
+						<span class="fa fa-user" aria-hidden="true"></span>
+						<input type="text" name="username" placeholder="Masukkan Username" required=""> 
+					</div>
+					<label>Password</label>
+					<div class="input-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<input type="Password" name="password" placeholder="Masukkan Password" required="">
+					</div>
+					<div class="login-check">
+						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Remember me</label>
+					</div>		
+										
+						<button class="btn btn-danger" name="login" type="submit">Login</button >                
+				</form>
+				<p class="account">Syarat dan ketentuan sebagai member <a href="file/download.php?nama_file=sk.pdf">Syarat & Ketentuan</a></p>
+				<p class="account1">Tidak punya akun? <a data-toggle="modal" data-target="#daftar"  href="#daftar">Register disini!</a></p>
+				
+			</div>
+		</div>
+		
+		<!-- //main content -->
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<p>&copy; 2019 Project e-Kasir. All Rights Reserved | Design by <a href="https://www.instagram.com/zimmersky/" target="blank">ZimmerSkyNerz</a></p>
+	</div>
+	<!-- footer -->
+</div>
+	
+
+
+
+	<!-- start modal daftar -->
+<div class="modal fade" id="daftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Daftar Menjadi Partner</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="register.php" enctype="multipart/form-data" method="POST">
+		<fieldset>
+					<label>Username</label>
+					<div class="input-group">
+						<span class="fa fa-user" aria-hidden="true"></span>
+						<input type="text" name="username" placeholder="Masukkan Username" required=""> 
+					</div>
+					<label>Password</label>
+					<div class="input-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<input type="Password" name="password" placeholder="Masukkan Password" min="8" required="">
+					</div>
+					<label>No KTP</label>
+					<div class="input-group">
+						<span class="fa fa-tag" aria-hidden="true"></span>
+						<input type="text" name="no_ktp" placeholder="Masukkan No KTP"  min="16" required=""> 
+					</div>
+					<label>Email</label>
+					<div class="input-group">
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<input type="email" name="email" placeholder="Masukkan Email" required="">
+					</div>
+					<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+        <button name="register" type="submit" class="btn btn-primary">Daftar Member</button>
+      </div>
+					</fieldset>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>	
+<!-- end modal daftar -->
+
+
+
+	
+	
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) 
+    var recipient = button.data('isi')
+    var modal = $(this)
+
+    modal.find('.modal-body input').val(recipient)
+  })
+</script>
+</body>
+</html>
